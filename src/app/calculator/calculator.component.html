@@ -1,0 +1,23 @@
+<div class="col-sm-12">
+    <table border="2">
+        <tr>
+            <td><label for="name" class="col-form-label">Enter First Number:</label></td>
+            <td><input #firstNumber type="text"></td>     
+        </tr>     
+        <tr>
+            <td><label for="name" class="col-form-label">Enter Second Number:</label></td>
+            <td><input #secondNumber type="text"></td>     
+        </tr>     
+    </table>
+    <button class="btn btn-primary" (click)="add(firstNumber.value, secondNumber.value)">ADD</button>
+    <label for="name" class="col-form-label">Result:{{addResult}}</label>
+    <br>
+    <button class="btn btn-primary" (click)="subtract(firstNumber.value, secondNumber.value)">SUBTRACT</button>
+    <label for="name" class="col-form-label">Result:{{subResult}}</label>
+    <br>
+    <button class="btn btn-primary" (click)="multiply(firstNumber.value, secondNumber.value)">MULTIPLY</button>
+    <label for="name" class="col-form-label">Result:{{multiplyResult}}</label>
+    <br>
+    <button class="btn btn-primary" (click)="divide(firstNumber.value, secondNumber.value)">DIVIDE</button>
+    <label for="name" class="col-form-label">Result:{{divideResult}}</label>
+</div>

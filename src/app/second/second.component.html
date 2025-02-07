@@ -1,0 +1,52 @@
+<div class="container">
+    <h2>Student Details</h2>
+    <table class="table" style="width: 75%" border="1">
+      <tr>
+        <th>ROLLNO</th>
+        <th>NAME</th>
+        <th>CITY</th>
+        <th>CREATED BY</th>
+        <th>CREATED DATE</th>
+        <th>MODIFIED BY</th>
+        <th>MODIFIED DATE</th>
+        <th>COURSEID</th>
+      </tr> 
+      <tr align="center" *ngFor="let student of studentList">
+        <td>{{student.rollno}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.city}}</td>
+        <td>{{student.createdby}}</td>
+        <td>{{student.createddate}}</td>
+        <td>{{student.modifiedby}}</td>
+        <td>{{student.modifieddate}}</td>
+        <td>{{student.courseid}}</td>
+      </tr>
+  </table>
+
+  <h3>  
+    <div class="col-sm-12">
+        <label for="name" class="col-form-label">Enter Student RollNo:</label>
+        <input #studentRno type="text">    
+        <button class="btn btn-primary" (click)="getStudentId(studentRno.value)">Get Details</button>
+    </div>
+    <div class="col-xs-12">
+        <p *ngIf="student.rollno=='' && rollno!=0"><span class="label danger">Student doesnt't exist</span></p>      
+    </div>
+  </h3>
+  <table class="table" style="width: 75%" border="1">
+      <tr>
+        <th>ROLLNO</th>
+        <th>NAME</th>
+        <th>CLASS</th>
+        <th>CREATED BY</th>
+        <th>MODIFIED BY</th>
+      </tr>
+      <tr>
+        <td>{{student.rollno}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.city}}</td>
+        <td>{{student.createdby}}</td>
+        <td>{{student.modifiedby}}</td>
+      </tr>
+    </table>
+</div>
